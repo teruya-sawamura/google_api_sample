@@ -1,0 +1,16 @@
+<div style="margin-bottom: 50px;">
+  <%= form_with url: root_path, method: :get, local: true do |form| %>
+    <%= form.text_field :translation %>
+    <%= form.submit '検索', name: nil %>
+  <% end %>
+</div>
+
+<% if @response.present? %>
+
+  <%= @translated_text %>
+
+<% else %>
+
+  <p>a</p>
+
+<% end %>
